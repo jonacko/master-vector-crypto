@@ -46,6 +46,7 @@ password: {
 // This function creates a new user, and the password is overwritten; the password should = whatever the user's password was but encryoted
 
 User.beforeCreate(async user => {
+    console.log('intercepted data: ', user);
     user.password = await bcrypt.hash(user.password, 10);
 })
 

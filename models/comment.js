@@ -41,6 +41,8 @@ user_id: {
     }
 }
 
+// Timestamps - adds time created column
+
 }, {
     sequelize: sequelizeConnection,
     timestamps: true,

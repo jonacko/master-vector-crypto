@@ -15,6 +15,11 @@ id: {
 
 },
 
+title: {
+    type: Sequelize.STRING,
+    alowNull: false
+},
+
 //text is unlimited - better than string in this instance (for blog post)
 
 content: {
@@ -23,7 +28,7 @@ content: {
 
 },
 
-// fk = kind of like a primary key for a different table
+// fk = kind of like a primary key for a different table.  'Reference' is the realtionship between them
 
 user_id: {
     trpe: Sequelize.INTEGER,
