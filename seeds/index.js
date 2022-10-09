@@ -1,9 +1,8 @@
 const {
     User,
     Post,
-    Comment
+    Comment }
     = require('../models');
-}
 
 const users = [
     {

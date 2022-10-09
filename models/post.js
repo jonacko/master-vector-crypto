@@ -8,7 +8,7 @@ const Post = sequelizeConnection.define('post', {
     // underscored: if sequelize has to reformat data it uses underscores (double check this)
 
 id: {
-    type: Sequelize.DataTypes.INTEGER,
+    type: Sequelize.INTEGER,
     primaryKey: true,
     autoIncrement: true,
     allowNull: false
@@ -31,7 +31,7 @@ content: {
 // fk = kind of like a primary key for a different table.  'Reference' is the realtionship between them
 
 user_id: {
-    trpe: Sequelize.INTEGER,
+    type: Sequelize.INTEGER,
     allowNull: false,
     reference: {
         model: 'User',
