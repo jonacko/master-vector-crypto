@@ -47,12 +47,14 @@ const posts = [
 const comments = [
     {
         content: 'Wow this is great',
-        user_id: 4
+        user_id: 4,
+        post_id: 1
     },
 
     {
         content: 'This sucks',
-        user_id: 2
+        user_id: 2,
+        post_id: 1
     },
 ]
 

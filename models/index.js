@@ -4,37 +4,37 @@ const Comment = require('./comment');
 
 // Sequelize documentation: The A.hasMany(B) association means that a One-To-Many relationship exists between A and B, with the foreign key being defined in the target model (B).
 
-User.hasMany(Post, {
-foreignKey: 'user_id',
-onDelete: 'CASCADE'
-})
-
-User.hasMany(Comment, {
-foreignKey: 'user_id',
-onDelete: 'CASCADE'
-});
-
 // Sequelize documentation: "The A.belongsTo(B) association means that a One-To-One relationship exists between A and B, with the foreign key being defined in the source model (A)."
 
-Post.belongsTo(User, {
-foreignKey: 'user_id',
-onDelete: 'CASCADE'
-});
-
-Post.hasMany(Comment, {
+User.hasMany(Post, {
+    foreignKey: 'user_id'
+    })
+    
+    User.hasMany(Comment, {
+    foreignKey: 'user_id',
+    onDelete: 'SET NULL'
+    });
+    
+    // Sequelize documentation: "The A.belongsTo(B) association means that a One-To-One relationship exists between A and B, with the foreign key being defined in the source model (A)."
+    
+    Post.belongsTo(User, {
+    foreignKey: 'user_id',
+    onDelete: 'SET NULL'
+    });
+    
+    Post.hasMany(Comment, {
+        foreignKey: 'post_id'
+    });
+    
+    Comment.belongsTo(User, {
+    foreignKey: 'user_id',
+    onDelete: 'SET NULL'
+    });
+    
+    Comment.belongsTo(Post, {
     foreignKey: 'post_id',
-    onDelete: 'CASCADE'
-});
-
-Comment.belongsTo(User, {
-foreignKey: 'user_id',
-onDelete: 'CASCADE'
-});
-
-Comment.belongsTo(Post, {
-foreignKey: 'post_id',
-onDelete: 'CASCADE'
-});
+    onDelete: 'SET NULL'
+    });
 
 module.exports = {
     User,
