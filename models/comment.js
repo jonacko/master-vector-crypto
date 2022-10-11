@@ -34,7 +34,7 @@ post_id: {
 
 user_id: {
     type: Sequelize.INTEGER,
-    allowNull: false,
+    allowNull: true,
     reference: {
         model: 'User',
         key: 'id'
