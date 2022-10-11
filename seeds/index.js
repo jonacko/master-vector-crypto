@@ -26,19 +26,19 @@ const users = [
 const posts = [
     {
         title: 'halloween keyboard review',
-        content: 'all I care about is ghost!!!!!!!!',
+        content: 'very ghosty',
         user_id: 2
     },
 
     {
-        title: 'backend teching is hard',
+        title: 'databases are hard',
         content: 'sooooooooo hard',
         user_id: 1
     },
 
     {
-        title: 'UI is fun',
-        content: 'the funnest',
+        title: 'I am hungry',
+        content: 'got any food?',
         user_id: 4
     }
 
@@ -61,9 +61,11 @@ const comments = [
 
 // bulkCreate = create and insert multiple instances in bulk; add multiple rows at once
 
-(async () => {
+const seedData = async () => {
 
 await User.bulkCreate(users);
 await Post.bulkCreate(posts);
 await Comment.bulkCreate(comments);
-});
+};
+
+seedData();

@@ -9,7 +9,7 @@ const expressHandlebars = require('express-handlebars');
 const sequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3002;
 
 const sess = {
   secret: 'Super secret secret',
@@ -32,8 +32,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
+require('./models');
+
 // app.use(routes);
 
 sequelize.sync({ force: true }).then(() => {
   app.listen(PORT, () => console.log('Now listening!'));
-});
+});``

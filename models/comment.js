@@ -3,7 +3,7 @@
 const Sequelize = require('sequelize');
 const sequelizeConnection = require('../config/connection');
 
-const Comment = sequelizeConnection.define('comment'); 
+const Comment = sequelizeConnection.define('comment', {
 
 id: {
     type: Sequelize.DataTypes.INTEGER,
@@ -52,4 +52,4 @@ user_id: {
 });
 
 
-module.exports = Comments; 
+module.exports = Comment; 
