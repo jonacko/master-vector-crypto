@@ -1,7 +1,7 @@
 {
   "name": "master-vector-crypto",
   "version": "1.0.0",
-  "description": "",
+  "description": "A CMS style blog where developers can blog about tech",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
