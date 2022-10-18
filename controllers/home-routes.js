@@ -3,31 +3,15 @@ const { Post, Comment, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', (req, res) => {
+
   Post.findAll({
-          attributes: [
-              'id',
-              'title',
-              'content',
-              'created_at'
-          ],
-          include: [{
-                  model: Comment,
-                  attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
-                  include: {
-                      model: User,
-                      attributes: ['username']
-                  }
-              },
-              {
-                  model: User,
-                  attributes: ['username']
-              }
-          ]
-      })
+    include: [User],
+  })
     .then((dbPostData) => {
 
     // Serialize data so the template can read it
-    const posts = dbPostData.map((post) => post.get({ plain: true }));
+    const posts = dbPostData.map((post) => post.get({ plain: true })); 
+    console.log(posts);
     // Pass serialized data and session flag into template
     res.render('homepage', {
       posts,
@@ -133,7 +117,7 @@ router.get('/', (req, res) => {
         res.status(500).json(err);
       });
   });
-  
+})
 
 
 // // Use withAuth middleware to prevent access to route
@@ -167,4 +151,3 @@ router.get('/', (req, res) => {
 // });
 
 module.exports = router;
-})

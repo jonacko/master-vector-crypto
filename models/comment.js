@@ -1,9 +1,9 @@
 // Every post has a comment, and every comment has an associated user 
 
 const Sequelize = require('sequelize');
-const sequelizeConnection = require('../config/connection');
+const sequelize = require('../config/connection');
 
-const Comment = sequelizeConnection.define('comment', {
+const Comment = sequelize.define('comment', {
 
 id: {
     type: Sequelize.DataTypes.INTEGER,
@@ -44,7 +44,7 @@ user_id: {
 // Timestamps - adds time created column
 
 }, {
-    sequelize: sequelizeConnection,
+    sequelize: sequelize,
     timestamps: true,
     freezeTableName: true,
     modelName: 'comments',

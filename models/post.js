@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
-const sequelizeConnection = require('../config/connection');
+const sequelize = require('../config/connection');
 
-const Post = sequelizeConnection.define('post', {
+const Post = sequelize.define('post', {
 
     // timestamp: if set to true, everytime a new user is created that user will have a timestamp of when that data was created
     // freezetablename = true means table name doesn't change depending on whether it should be plural or not
@@ -40,7 +40,7 @@ user_id: {
 }
 
 }, {
-    sequelize: sequelizeConnection,
+    sequelize: sequelize,
     timestamps: true,
     freezeTableName: true,
     modelName: 'posts',
