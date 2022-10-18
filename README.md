@@ -1,6 +1,6 @@
 # master-vector-crypto
 - Module 14 assignment for UoB Bootcamp due 10-10-22
-- Deployed link: https://thawing-refuge-48753.herokuapp.com/ (does not work on link but runs locally - please see section 3 below)
+- Deployed link: https://thawing-refuge-48753.herokuapp.com/
 
 Contents:
 
@@ -86,8 +86,6 @@ TODO:
 - Post, users and comments routes cannot GET:
 
 <img src ="images/cannot_get.png">
-
-- deployed link does not work
 
 - css styling to be added
 
