@@ -92,17 +92,6 @@ router.post('/login', (req, res) => {
                 return;
             }
 
-            req.session.save(() => {
-                req.session.user_id = dbUserData.id;
-                req.session.username = dbUserData.username;
-                req.session.loggedIn = true;
-
-                res.json({
-                    user: dbUserData,
-                    message: 'You are now logged in!'
-                });
-            });
-
             const validPassword = dbUserData.checkPassword(req.body.password);
 
             if (!validPassword) {
@@ -111,7 +100,7 @@ router.post('/login', (req, res) => {
                 });
                 return;
             }
-
+console.log('LOGGED IN!!!')
             req.session.save(() => {
                 req.session.user_id = dbUserData.id;
                 req.session.username = dbUserData.username;

@@ -15,8 +15,8 @@ router.get('/', (req, res) => {
     // Pass serialized data and session flag into template
     res.render('homepage', {
       posts,
-      logged_in: req.session.logged_in,
-      username: req.session.username,
+      // logged_in: req.session.logged_in,
+      // username: req.session.username,
     });
   })
   .catch((err) => {
@@ -27,7 +27,7 @@ router.get('/', (req, res) => {
 
   router.get('/login', (req, res) => {
     if (req.session.loggedIn) {
-      res.redirect('/');
+      res.redirect('/dashboard');
       return;
     }
     res.render('login');

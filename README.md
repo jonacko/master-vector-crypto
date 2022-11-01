@@ -2,6 +2,16 @@
 - Module 14 assignment for UoB Bootcamp due 10-10-22
 - Deployed link: https://thawing-refuge-48753.herokuapp.com/
 
+
+************ Update post tutorial 01/11/22 ***********
+
+- Log in works
+- Sign up works
+- Lpg out works
+
+Check handlebars.js for correct file paths (not/public) - DONE
+Error when creating new post http://localhost:3001/dashboard/new
+
 Contents:
 
 1. Summary
