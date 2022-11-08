@@ -3,11 +3,21 @@
 - Deployed link: https://thawing-refuge-48753.herokuapp.com/
 
 
-************ Update post tutorial 01/11/22 ***********
+************ Update since previous submission 08/11/22 ***********
 
-- Log in works
+- Login works
 - Sign up works
-- Lpg out works
+- Log out works
+- Blog posts are presented on dashboard
+- User can create post
+- User can  edit post - update and delete
+- Changes deployed successfully to Heroku
+
+TODO:
+
+- Create function to leave, update and delete a comment
+- Add date created for blog posts and comments
+- Styling
 
 Check handlebars.js for correct file paths (not/public) - DONE
 Error when creating new post http://localhost:3001/dashboard/new
@@ -74,6 +84,8 @@ Acceptance criteria:
 - when user clicks on the 'home' button, user is taken page to the homepage
 - when user clicks on the 'login' button, the user is prompted to login (4)
 - when user clicks on the 'signup' button, the user is prompted to sign up (5)
+- when user clicks on the button to add a new blog post then they are prompted to enter both a title and contents.  Contents can be updated and deleted (6)
+- when user is presented with the homepage, it includes existing blog posts if any have been posted (7)
 
 1) <img src ="images/seed_database.png">
 
@@ -87,17 +99,17 @@ Acceptance criteria:
 
 5) <img src ="images/signup-page.png">
 
+6) <img src = "images/create_post.png">
+
+7) <img src = "images/dashboard_example.png">
+
 ## 3. Issues encountered/further amendments
 
 Key issues with the functionality of the app are as follows:
 
 TODO: 
 
-- Post, users and comments routes cannot GET:
-
-<img src ="images/cannot_get.png">
-
-- css styling to be added
+- Please see updates section above
 
 
 ## 4. Credits
